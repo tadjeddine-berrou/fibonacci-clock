@@ -11,7 +11,8 @@
     "dev:ssr": "ng run fibonacci-clock:serve-ssr",
     "serve:ssr": "node dist/fibonacci-clock/server/main.js",
     "build:ssr": "ng build && ng run fibonacci-clock:server",
-    "prerender": "ng run fibonacci-clock:prerender"
+    "prerender": "ng run fibonacci-clock:prerender",
+    "build-prod": "npm run build:ssr && npm run serve:ssr"
   },
   "private": true,
   "dependencies": {
