@@ -1,0 +1,12 @@
+:host {
+  display: block;
+
+  .fibonacci-clock-viewer-square {
+    display: grid;
+    place-items: center;
+    border: 1px solid black;
+    aspect-ratio: 1/1;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}

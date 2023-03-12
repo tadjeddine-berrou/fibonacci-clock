@@ -22,7 +22,13 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "plugins": [
+      {"name": "@angular/language-service"}
+    ],
+    "paths": {
+      "@home/*": ["src/app/features/home/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

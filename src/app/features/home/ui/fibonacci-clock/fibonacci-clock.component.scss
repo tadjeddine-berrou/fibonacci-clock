@@ -1,0 +1,35 @@
+.fibonacci-clock {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__main {
+    flex: 1;
+    margin-right: 32px;
+  }
+
+  &__viewer {
+    margin-bottom: 24px;
+  }
+
+  &__toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .clock-time {
+      margin: 0 42px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  &__aside {
+    width: 332px;
+
+    fc-fibonacci-clock-viewer:not(:last-child) {
+      display: block;
+      margin-bottom: 16px;
+    }
+  }
+}

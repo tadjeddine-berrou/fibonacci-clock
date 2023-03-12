@@ -1,0 +1,9 @@
+<div class="home">
+
+  <fc-fibonacci-clock
+    [time]="time$ | async"
+    (back)="onClockBack()"
+    (next)="onClockNext()"
+  ></fc-fibonacci-clock>
+
+</div>

@@ -1,0 +1,49 @@
+<div class="fibonacci-clock">
+
+  <main class="fibonacci-clock__main">
+
+    <h2>Randomly selected representation</h2>
+
+    <div class="fibonacci-clock__viewer">
+      <fc-fibonacci-clock-viewer
+        [combination]="combinations[selectedCombinationIndex]"
+      ></fc-fibonacci-clock-viewer>
+    </div>
+
+    <div class="fibonacci-clock__toolbar">
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        (click)="back.emit()"
+      >
+        Back
+      </button>
+      <div class="clock-time">
+        {{ time }}
+      </div>
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        (click)="next.emit()"
+      >
+        Next
+      </button>
+    </div>
+
+  </main>
+
+  <aside class="fibonacci-clock__aside">
+    <h2>Other possible representations ({{combinations.length - 1}})</h2>
+    <div class="fibonacci-clock__other">
+      <ng-container *ngFor="let combination of combinations; index as i">
+        <fc-fibonacci-clock-viewer
+          *ngIf="i !== selectedCombinationIndex"
+          [combination]="combination"
+        ></fc-fibonacci-clock-viewer>
+      </ng-container>
+    </div>
+  </aside>
+
+</div>

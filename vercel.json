@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "public": true,
+  "name": "fibonacci-clock",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api" }
+  ],
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/fibonacci-clock/browser/**"
+    }
+  }
+}

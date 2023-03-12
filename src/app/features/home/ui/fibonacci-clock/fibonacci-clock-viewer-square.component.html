@@ -1,0 +1,11 @@
+<div
+  class="fibonacci-clock-viewer-square"
+  [ngStyle]="{
+    'color': square.color ? '#fff' : '#000',
+    'background-color': square.color | fibonacciSquareColor
+  }"
+>
+  <span>
+    {{ square.value }}
+  </span>
+</div>
